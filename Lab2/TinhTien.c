@@ -13,17 +13,18 @@ int main(){
     printf("Nhap so luong dau: ");
     scanf("%f", &soLuongDau);
 
-    float tongSoTienGaoVND = soLuongGao * giaGao;
-    float tongSoTienDauVND = soLuongDau * giaDau;
+    float tongSoTienGaoUSD = soLuongGao * giaGao;
+    float tongSoTienDauUSD = soLuongDau * giaDau;
 
-    float tongSoTienGaoUSD = tongSoTienGaoVND * tiGiaDoLa;
-    float tongSoTienDauUSD = tongSoTienDauVND * tiGiaDoLa;
+    float tongSoTienGaoVND = tongSoTienGaoUSD * tiGiaDoLa;
+    float tongSoTienDauVND = tongSoTienDauUSD * tiGiaDoLa;
 
     float tongSoTienVND = tongSoTienGaoVND + tongSoTienDauVND;
     float tongSoTienUSD = tongSoTienGaoUSD + tongSoTienDauUSD;
     
-    printf("Tong so tien VND phai tra la: %.2f\n", tongSoTienVND);
-    printf("Tong so tien USD phai tra la: %.2f\n", tongSoTienUSD);
+    printf("---Hoa don chi tiet---\n");
+    printf("Tong so tien USD phai tra la: %.2f (USD)\n", tongSoTienUSD);
+    printf("Tong so tien VND phai tra la: %.2f (VND)\n", tongSoTienVND*1000);
 
     return 0;
     
