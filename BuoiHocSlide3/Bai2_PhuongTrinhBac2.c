@@ -36,16 +36,15 @@ int main(){
             else {
                 printf("Phuong trinh vo nghiem\n");
             }
-
-            printf("Ban co muon chay chuong trinh tiep khong (Y/N)? ");
-            scanf(" %c", &choice);
-
-            if(choice == 'N' || choice == 'n'){
-            break;
-            }
-        
-        printf("\n-------------------------\n");
         }
+
+        printf("Ban co muon chay chuong trinh tiep khong (Y/N)? ");
+        scanf(" %c", &choice);
+
+        if(choice == 'N' || choice == 'n'){
+        break;
+        }
+        printf("\n-------------------------\n");
     }
     return 0;
 }
