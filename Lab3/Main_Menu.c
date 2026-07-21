@@ -92,24 +92,47 @@ void giaiPhuongTrinhBac2(){
 }
 
 //Nhap so dien duong (+), tach so dien theo bac (vd 250 so thì tach ra 50 so bac 1, 50 so bac 2, 100 so bac 3 và 50 so bac 4), tien dien hien thi so tien theo tung bac va tong so tien VND.
-//soDien la tong so dien tieu thu, bac la bac của so dien do, phanDu la so dien tai bac cao nhat (vd soDien 250 thì bac la 4 va phanDu la 250 - 200)
+//soDien la tong so dien tieu thu, phanDu la so dien tai bac cao nhat (vd soDien 250 thì phanDu la 250 - 200)
 void tinhTienDien(){
 
-    int soDien, bac, phanDu;
+    int soDien, phanDu;
     float tongTien;
 
     do{
         printf("Nhap tong so kWh dien tieu thu: ");
         scanf("%d", &soDien);
         if(soDien < 0){
-            printf("So dien khong hop le, vui long nhap so duong!");
+            printf("So dien khong hop le, vui long nhap so duong!\n");
         }
     }while (soDien < 0);
     
     if(soDien <= 50){
-        bac = 1;
-        
+        phanDu = soDien;
+        tongTien = 1678 * soDien;
     }
+    else if(soDien <= 100){
+        phanDu = soDien - 50;
+        tongTien = (1678 * 50) + (1734 * phanDu);
+    }
+    else if (soDien <= 200){
+        phanDu = soDien - 100;
+        tongTien = (1678 * 50) + (1734 * 50) + (2014 * phanDu);
+    }
+    else if (soDien <= 300){
+        phanDu = soDien - 200;
+        tongTien = (1678 * 50) + (1734 * 50) + (2014 * 100) + (2536 * phanDu);
+    }
+    else if (soDien <= 400){
+        phanDu = soDien - 300;
+        tongTien = (1678 * 50) + (1734 * 50) + (2014 * 100) + (2536 * 100) + (2834 * phanDu);
+    }
+    else{
+        phanDu = soDien - 400;
+        tongTien = (1678 * 50) + (1734 * 50) + (2014 * 100) + (2536 * 100) + (2834 * 100) + (2927 * phanDu);
+    }
+    
+    printf("+---Hoa don tien dien---+\n");
+    printf("Voi tong so dien la %d kWh thi tong so tien phai thanh toan la : %.2f VND\n", soDien, tongTien);
 }
 
 int main(){
@@ -140,6 +163,7 @@ int main(){
             break;
         case 3:
             printf("Ban da chon chuc nang 3: Tinh tien dien tieu thu hang thang\n");
+            tinhTienDien();
             break;
         case 4:
             printf("Ban da chon thoat chuong trinh!\n");
