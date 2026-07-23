@@ -1,5 +1,41 @@
 #include<stdio.h>
 
+void kTraSoNguyen(){
+
+    float x;
+    int temp;
+
+    printf("Nhap vao so muon kiem tra x = ");
+    scanf("%f", &x);
+
+    if(x == (int)x){
+        temp = 0;
+        printf("So %g la so nguyen!\n", x);
+    }
+    else{
+        temp = 1;
+        printf("So %g khong phai so nguyen!\n", x);
+    }
+
+    if(temp = 1){
+        printf("So %g khong phai so nguyen to!\n", x);
+    }
+    else{
+        if((int)x < 2){
+            printf("So %g khong phai la so nguyen to!\n", x);
+        }
+        else{
+            for(int i = 2; i < x; i++){
+                if((int)x % i == 0){
+                    printf("So %g khong phai la so nguyen to!", x);
+                    break;
+                }
+            }
+        }
+    }
+    
+}
+
 int main(){
 
     int chon;
@@ -28,6 +64,7 @@ int main(){
         {
         case 1:
             printf("Ban da chon chuc nang 1:\nKiem tra so nguyen\n");
+            kTraSoNguyen();
             break;
         case 2:
             printf("Ban da chon chuc nang 2:\nTim uoc so chung va boi so chung cua 2 so\n");
