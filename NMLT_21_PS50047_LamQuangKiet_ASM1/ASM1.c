@@ -6,7 +6,7 @@ int main(){
     
     do{
         printf("+--------------------------------------------------+\n");
-        printf("|              MENU CHUONG TRINH ASM 1             |\n");
+        printf("|               MENU CHUONG TRINH ASM              |\n");
         printf("+--------------------------------------------------+\n");
         printf("| 1.  Chuc nang kiem tra so nguyen                 |\n");
         printf("| 2.  Chuc nang tim uoc so chung va boi so chung   |\n");
@@ -22,6 +22,7 @@ int main(){
         printf("+--------------------------------------------------+\n");
         printf(">> Chon chuc nang cua ban (1-11): ");
         scanf("%d", &chon);
+        printf("\n");
 
         switch (chon)
         {
@@ -63,8 +64,8 @@ int main(){
             break;
         }
         if(chon != 11 && chon >=1 && chon <= 10){
-            printf("------------Chuong trinh da thuc thi!--------------\n");
-            printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+            printf("\n------------Chuong trinh da thuc thi!--------------\n");
+            printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n");
         }
     }while (chon != 11);
     
