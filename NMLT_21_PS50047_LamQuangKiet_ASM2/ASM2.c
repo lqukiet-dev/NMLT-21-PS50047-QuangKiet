@@ -1,13 +1,15 @@
 #include<stdio.h>
+#include<math.h>
 
 void kTraSoNguyen(){
 
     float x;
-    int temp;
+    int temp, i;
 
     printf("Nhap vao so muon kiem tra x = ");
     scanf("%f", &x);
 
+    //Kiem tra so nguyen
     if(x == (int)x){
         temp = 0;
         printf("So %g la so nguyen!\n", x);
@@ -17,20 +19,37 @@ void kTraSoNguyen(){
         printf("So %g khong phai so nguyen!\n", x);
     }
 
-    if(temp = 1){
+    //Kiem tra so nguyen to
+    if(temp == 1){
         printf("So %g khong phai so nguyen to!\n", x);
     }
     else{
-        if((int)x < 2){
+        if(x < 2){
             printf("So %g khong phai la so nguyen to!\n", x);
         }
         else{
-            for(int i = 2; i < x; i++){
+            for(i = 2; i < x; i++){
                 if((int)x % i == 0){
-                    printf("So %g khong phai la so nguyen to!", x);
+                    printf("So %g khong phai la so nguyen to!\n", x);
                     break;
                 }
             }
+            if(i == x){
+                printf("So %g la so nguyen to!\n", x);
+            }
+        }
+    }
+
+    //Kiem tra so chinh phuong
+    if(temp == 1){
+        printf("So %g khong phai la so chinh phuong!\n", x);
+    }
+    else{
+        if(sqrt(x) * sqrt(x) == (int)x){
+            printf("So %g la so chinh phuong!\n", x);
+        }
+        else{
+            printf("So %g khong phai la so chinh phuong!\n", x);
         }
     }
     
