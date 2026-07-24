@@ -29,8 +29,7 @@ int main() {
       printf("Ban da chon chuc nang 1:\nKiem tra so nguyen\n");
       break;
     case 2:
-      printf("Ban da chon chuc nang 2:\nTim uoc so chung va boi so chung cua 2 "
-             "so\n");
+      printf("Ban da chon chuc nang 2:\nTim uoc so chung va boi so chung cua 2 so\n");
       break;
     case 3:
       printf("Ban da chon chuc nang 3:\nTinh tien cho quan Karaoke\n");
